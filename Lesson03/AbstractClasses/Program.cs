@@ -14,17 +14,17 @@ namespace AbstractClasses
                 AnnualSalary = 120
             };
             Console.WriteLine(fte.GetFullName());
-            Console.WriteLine(fte.GetMonthlySalary());
+            Console.WriteLine("Salary: " + fte.GetMonthlySalary());
 
         ContractEmployee cte = new ContractEmployee(){
             ID  = 102,
-                FirstName = "some",
-                LastName = "here",
+                FirstName = "John",
+                LastName = "Doe",
                 HourlyPay = 20,
                 TotalHours = 40
         };
         Console.WriteLine(cte.GetFullName());
-        Console.WriteLine(cte.GetMonthlySalary());
+        Console.WriteLine("Salary: " + cte.GetMonthlySalary());
         }
     }
 }

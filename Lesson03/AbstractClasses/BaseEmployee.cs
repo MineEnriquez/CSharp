@@ -7,12 +7,11 @@ public abstract class BaseEmployee
     public string LastName { get; set; }
     public string GetFullName()
     {
-        return this.FirstName + this.LastName;
+        return this.FirstName + " " + this.LastName;
     }
 
-    // Marking it as virtual method because the BaseEmployee class doesn't know how will the FTE and ContractEmployee will actually be implementing it.
-    public virtual int GetMonthlySalary()  
-    {
-        throw new NotImplementedException();
-    }
+    // By marking GetMonthlySalary as ABSTRACT method we don't have to provide an implementation  
+    // but instead only a declaration.
+    public abstract int GetMonthlySalary();
+    
 }
