@@ -1,6 +1,6 @@
 using System;
 
-public class BaseEmployee
+public abstract class BaseEmployee
 {
     public int ID { get; set; }
     public string FirstName { get; set; }
