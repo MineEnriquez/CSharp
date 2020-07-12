@@ -32,3 +32,10 @@ In order to fix the code duplicity:
 - 1: Move the common properties to the Base class
 - 2: Move the common methods to the Base class
 - 3: Inherit the ContractEmployee and FullTimeEmployee from the BaseEmployee class.
+
+- 4: For methods which implementation will differ, we have to mark them VIRTUAL, and leave them EMPTY (maybe only with a throw exception)
+    sample: 
+           public virtual int MyMethod()
+            {
+                throw new NotImplementeException();
+            }
