@@ -35,6 +35,7 @@ In order to fix the code duplicity:
 
 - 4: For methods which implementation will differ, we have to mark them VIRTUAL, and leave them EMPTY (maybe only with a throw exception)
     sample: 
+    
            public virtual int MyMethod()
             {
                 throw new NotImplementeException();
