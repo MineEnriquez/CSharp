@@ -18,3 +18,17 @@ Full Time employee
 CLASS 2:
 Contract Employee
 
+DECISION POINT:
+In order to fix the code duplicity:
+  - should we redesign the project with an Abstract Class?
+  - should we redesignt it as a Concrete Class ( non abstract). 
+
+  If we create "BaseEmployee" class as a concrete class (Non-Abstract), there is nothing stopping us from creating an instance of BaseEmployee class. 
+  We only have 2 types of employees in our organization - contract employee and full time employee. The developer should only need to instantiate ContractEmployee and FullTimeEmployee classes and *not BaseEmployee class* So to avoid *this* we implement instead an Abstract Class. 
+
+  ### We would create an abstract class when we want to move the common functionality of 2 or more classes into a base class and when we don't want the BASE CLASS TO BE *DIRECTLY* INSTANTIATED.
+
+
+- 1: Move the common properties to the Base class
+- 2: Move the common methods to the Base class
+- 3: Inherit the ContractEmployee and FullTimeEmployee from the BaseEmployee class.
