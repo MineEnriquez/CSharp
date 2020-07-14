@@ -4,7 +4,9 @@ public class FullTimeEmployee : BaseEmployee
 {
     
     public int AnnualSalary {get; set; }
-     public int GetMonthlySalary(){
+
+    //We need to make this method an override of the BaseEmployee one.
+     public override int GetMonthlySalary(){
         return this.AnnualSalary / 12;
     }
 }
