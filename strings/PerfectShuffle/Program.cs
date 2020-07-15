@@ -6,21 +6,28 @@ namespace PerfectShuffle
     {
         static void Main(string[] args)
         {
-            string a = "aaaaaa";
-            string b = "bbbbbb";
+            string a = "aaaaaaaaaaaaaaaaaaaaaaaa";
+            string b = "1234567890";
             Console.WriteLine(perfectshuffle(a, b));
         }
 
         static string perfectshuffle(string s, string t)
         {
+            Console.WriteLine(s);
+            Console.WriteLine(t);
             //BUG: it doesn't finish the sequence.
-            if (s.Length != t.Length) return "I can't shuffle it";
-            int n = s.Length;
+            // if (s.Length != t.Length) return "I can't shuffle it";
+            
+            int n = s.Length/2;
+            int m = t.Length/2;
 
-            if (n <= 1) return s + t;
+            Console.WriteLine (n);
+            Console.WriteLine (m);
 
-            string a = perfectshuffle(s.Substring(0, s.Length / 2), t.Substring(0, t.Length / 2));
-            string b = perfectshuffle(s.Substring(s.Length / 2 + s.Length % 2, s.Length - (s.Length / 2 + s.Length % 2)), t.Substring(t.Length / 2 + t.Length % 2, t.Length - (t.Length / 2 + t.Length % 2)));
+            if (s.Length <= 1 || t.Length<=1) return s + t;
+
+            string a = perfectshuffle(s.Substring(0, n), t.Substring(0, m));
+            string b = perfectshuffle(s.Substring(n, s.Length - n), t.Substring(m, t.Length - m));
             return a + b;
         }
     }
