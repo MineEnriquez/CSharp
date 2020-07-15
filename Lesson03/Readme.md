@@ -41,3 +41,5 @@ In order to fix the code duplicity:
                 throw new NotImplementedException();
             }
 - 5: Next we MARK THE BASE CLASS AS ABSTRACT, because we want to prevent it for that class to be instantiated - remember, there is no "BaseEmployee" type of employee, we are just using this class as base for the actual employee types.  Also, if we allow it, there will be a "NotImplementedException" being thown because we left intentionally that method virtual and not implemented - allowing with this to be defined by the inheriting 'child' class.
+
+- 6: Martch your method ABSTRACT to force its implementation by its child classes, and so that you don't need to provide an implementation
